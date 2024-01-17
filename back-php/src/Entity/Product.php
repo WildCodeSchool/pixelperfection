@@ -36,9 +36,13 @@ class Product
     #[ORM\ManyToMany(targetEntity: Country::class, mappedBy: 'products')]
     private Collection $countries;
 
+    #[ORM\ManyToMany(targetEntity: Quality::class, mappedBy: 'product')]
+    private Collection $qualities;
+
     public function __construct()
     {
         $this->countries = new ArrayCollection();
+        $this->qualities = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -140,6 +144,33 @@ class Product
     {
         if ($this->countries->removeElement($country)) {
             $country->removeProduct($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Quality>
+     */
+    public function getQualities(): Collection
+    {
+        return $this->qualities;
+    }
+
+    public function addQuality(Quality $quality): static
+    {
+        if (!$this->qualities->contains($quality)) {
+            $this->qualities->add($quality);
+            $quality->addProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuality(Quality $quality): static
+    {
+        if ($this->qualities->removeElement($quality)) {
+            $quality->removeProduct($this);
         }
 
         return $this;
