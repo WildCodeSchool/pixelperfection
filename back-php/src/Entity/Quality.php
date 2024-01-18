@@ -114,7 +114,7 @@ class Quality
         return $this->efficiency;
     }
 
-    public function setEfficiency(int $Efficiency): static
+    public function setEfficiency(int $efficiency): static
     {
         $this->efficiency = $efficiency;
 
