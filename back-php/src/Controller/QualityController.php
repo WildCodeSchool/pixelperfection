@@ -71,7 +71,7 @@ class QualityController extends AbstractController
     #[Route('/{id}', name: 'app_quality_delete', methods: ['POST'])]
     public function delete(Request $request, Quality $quality, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$quality->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' .$quality->getId(), $request->request->get('_token'))) {
             $entityManager->remove($quality);
             $entityManager->flush();
         }

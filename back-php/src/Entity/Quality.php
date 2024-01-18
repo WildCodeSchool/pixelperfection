@@ -16,7 +16,7 @@ class Quality
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $parfume = null;
+    private ?int $perfume = null;
 
     #[ORM\Column]
     private ?int $texture = null;
@@ -25,10 +25,10 @@ class Quality
     private ?int $application = null;
 
     #[ORM\Column]
-    private ?int $packaging_attractive = null;
+    private ?int $packagingAttractive = null;
 
     #[ORM\Column]
-    private ?int $packaging_convenient = null;
+    private ?int $packagingConvenient = null;
 
     #[ORM\Column]
     private ?int $efficiency = null;
@@ -49,14 +49,14 @@ class Quality
         return $this->id;
     }
 
-    public function getParfume(): ?int
+    public function getPerfume(): ?int
     {
         return $this->parfume;
     }
 
-    public function setParfume(int $parfume): static
+    public function setPerfume(int $perfume): static
     {
-        $this->parfume = $parfume;
+        $this->parfume = $perfume;
 
         return $this;
     }
@@ -87,24 +87,24 @@ class Quality
 
     public function getPackagingAttractive(): ?int
     {
-        return $this->packaging_attractive;
+        return $this->packagingAttractive;
     }
 
-    public function setPackagingAttractive(int $packaging_attractive): static
+    public function setPackagingAttractive(int $packagingAttractive): static
     {
-        $this->packaging_attractive = $packaging_attractive;
+        $this->packagingAttractive = $packagingAttractive;
 
         return $this;
     }
 
     public function getPackagingConvenient(): ?int
     {
-        return $this->packaging_convenient;
+        return $this->packagingConvenient;
     }
 
-    public function setPackagingConvenient(int $packaging_convenient): static
+    public function setPackagingConvenient(int $packagingConvenient): static
     {
-        $this->packaging_convenient = $packaging_convenient;
+        $this->packagingConvenient = $packagingConvenient;
 
         return $this;
     }
