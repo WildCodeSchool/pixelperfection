@@ -1,9 +1,10 @@
-.btn-primary{
-    --bs-btn-bg: white;
+.btn-primary {
+    --bs-btn-bg: rgb(255, 215, 0);
     --bs-btn-color: black;
-    --bs-btn-border-color: var(--gold);
-    --bs-btn-hover-bg: rgb(255, 215, 0) !important;
+    --bs-btn-border-color: rgb(255, 215, 0);
+    --bs-btn-hover-bg: rgb(255, 0, 0) !important;
     --bs-btn-hover-color: black !important;
+    --bs-btn-hover-border-color: black !important;
 }
 
 .card-img-overlay {
@@ -11,19 +12,20 @@
     left: 2rem;
 }
 
-.page-section{
+.page-section {
     margin: 4rem 3rem;
 }
 
-.text-center{
+.page-contact {
+    display: flex;
+    justify-content: center;
+}
+
+.text-center {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .text-primary {
     color: black !important;
-}
-
-@media screen and (min-width: 661px) {
-
 }
