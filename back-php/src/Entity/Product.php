@@ -16,22 +16,7 @@ class Product
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $brand = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $productName = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $productCategory = null;
-
-    #[ORM\Column]
-    private ?float $productBasePrice = null;
-
-    #[ORM\Column]
-    private ?int $productQuantity = null;
-
-    #[ORM\Column]
-    private ?float $productTotalPrice = null;
 
     #[ORM\ManyToMany(targetEntity: Country::class, mappedBy: 'products')]
     private Collection $countries;
@@ -46,18 +31,6 @@ class Product
         return $this->id;
     }
 
-    public function getBrand(): ?string
-    {
-        return $this->brand;
-    }
-
-    public function setBrand(string $brand): static
-    {
-        $this->brand = $brand;
-
-        return $this;
-    }
-
     public function getProductName(): ?string
     {
         return $this->productName;
@@ -66,54 +39,6 @@ class Product
     public function setProductName(string $productName): static
     {
         $this->productName = $productName;
-
-        return $this;
-    }
-
-    public function getProductCategory(): ?string
-    {
-        return $this->productCategory;
-    }
-
-    public function setProductCategory(string $productCategory): static
-    {
-        $this->productCategory = $productCategory;
-
-        return $this;
-    }
-
-    public function getProductBasePrice(): ?float
-    {
-        return $this->productBasePrice;
-    }
-
-    public function setProductBasePrice(float $productBasePrice): static
-    {
-        $this->productBasePrice = $productBasePrice;
-
-        return $this;
-    }
-
-    public function getProductQuantity(): ?int
-    {
-        return $this->productQuantity;
-    }
-
-    public function setProductQuantity(int $productQuantity): static
-    {
-        $this->productQuantity = $productQuantity;
-
-        return $this;
-    }
-
-    public function getProductTotalPrice(): ?float
-    {
-        return $this->productTotalPrice;
-    }
-
-    public function setProductTotalPrice(float $productTotalPrice): static
-    {
-        $this->productTotalPrice = $productTotalPrice;
 
         return $this;
     }
