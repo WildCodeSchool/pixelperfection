@@ -1,17 +1,22 @@
+.qualityf {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 42px;
+    font-weight:bold;
+    margin-left: 40px;
+
+}
+
 .quality_h1{
+    display: flex;
+    justify-content: center;
     color: #090606;
-    font-family: 'roboto', sans-serif;
-    width: 70%;
+    font-family: 'Montserrat', sans-serif;
     margin: auto;
     font-weight: bolder;
-}
-.qualityf {
-
-    font-family: 'roboto', sans-serif;
-    line-height: 42px;
-    margin-left: 10px;
-    font-weight:bold;
-
+    font-size: 32px;
 }
 
 .title-category {
@@ -23,28 +28,32 @@
     margin-left: 0px;
 }
 
+
 .quality {
     margin-bottom: 20px;
     height: 26px;
     margin-left: 5px;
     border-radius: 11px;
-    width: 31px;
+    width: 45px;
+
 }
 
 .btnqual {
     width: 150px;
     height: 40px;
     border-radius: 10px;
-    background-color: #e09404;
+    background-color: rgba(224, 148, 4, 0.89);
     text-align: center;
     font-size: 20px;
     flex: 0;
-    color: black;
+    color: #f5f0f0;
     cursor: pointer;
     padding: 0px 5px;
     margin: 10px;
     border: solid #ff9100 1px;
+    font-weight: bolder;
 }
+
 .btnqual:hover {
     background-color: #d59d55;
 }
