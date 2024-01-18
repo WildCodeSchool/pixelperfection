@@ -7,7 +7,13 @@
 }
 .qualityback{
     background-image: linear-gradient(to right, rgba(255, 215, 0, 0.55), rgba(224, 148, 4, 0.47));
-
+}
+.product{
+    margin-bottom: -46px;
+    height: 65px;
+    margin-left: 5px;
+    border-radius: 11px;
+    width: 171px;
 }
 .qualityf {
     position: relative;
@@ -21,7 +27,6 @@
 }
 
 .quality_h1{
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     display: flex;
     color: #090606;
     font-family: 'Montserrat', sans-serif;

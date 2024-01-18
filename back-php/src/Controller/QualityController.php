@@ -33,6 +33,8 @@ class QualityController extends AbstractController
             $entityManager->persist($quality);
             $entityManager->flush();
 
+
+
             return $this->redirectToRoute('app_quality_index', [], Response::HTTP_SEE_OTHER);
         }
 

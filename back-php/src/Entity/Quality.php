@@ -37,6 +37,7 @@ class Quality
     private ?bool $allergy = null;
 
     #[ORM\ManyToMany(targetEntity: Product::class, inversedBy: 'qualities')]
+    #[ORM\JoinTable(name:'quality_product')]
     private Collection $product;
 
     public function __construct()
