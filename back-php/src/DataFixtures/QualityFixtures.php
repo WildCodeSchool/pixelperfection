@@ -13,7 +13,7 @@ class QualityFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        for ($i=0; $i < 50; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $quality = new Quality();
 
             $quality->setPerfume($faker->numberBetween(1, 5));
