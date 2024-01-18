@@ -361,6 +361,14 @@ class CountryFixtures extends Fixture
             'perfumery' => 21.63,
             'online' => 23.29,
         ],
+        [
+            'name' => 'Italy',
+            'supermarket' => 22.45,
+            'beautySalon' => 6.28,
+            'pharmacy' => 13.17,
+            'perfumery' => 30.61,
+            'online' => 27.49,
+        ],
 
     ];
     public function load(ObjectManager $manager): void
