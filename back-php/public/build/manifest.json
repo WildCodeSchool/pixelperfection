@@ -4,5 +4,7 @@
   "build/runtime.js": "http://localhost:8080/build/runtime.js",
   "build/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-63f5df.js": "http://localhost:8080/build/vendors-node_modules_webpack-dev-server_client_index_js_protocol_ws_3A_hostname_0_0_0_0_port_-63f5df.js",
   "build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_fu-f2e76b.js": "http://localhost:8080/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_fu-f2e76b.js",
-  "build/images/logo-wild-code-school.svg": "http://localhost:8080/build/images/logo-wild-code-school.7f6cdd70.svg"
+  "build/images/logo-wild-code-school.svg": "http://localhost:8080/build/images/logo-wild-code-school.7f6cdd70.svg",
+  "build/images/voila.jpg": "http://localhost:8080/build/images/voila.1156be3e.jpg",
+  "build/images/europe.svg": "http://localhost:8080/build/images/europe.21baf6b4.svg"
 }

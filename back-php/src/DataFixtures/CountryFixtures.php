@@ -27,11 +27,11 @@ class CountryFixtures extends Fixture
         ],
         [
             'name' => 'Armenia',
-            'supermarket' => 530.035,
-            'beautySalon' => 512.615,
-            'pharmacy' => 527.075,
-            'perfumery' => 53.445,
-            'online' => 526.8,
+            'supermarket' => 30.03,
+            'beautySalon' => 12.61,
+            'pharmacy' => 27.07,
+            'perfumery' => 3.44,
+            'online' => 26.85,
         ],
         [
             'name' => 'Austria',
