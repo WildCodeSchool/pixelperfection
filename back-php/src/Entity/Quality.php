@@ -51,12 +51,12 @@ class Quality
 
     public function getPerfume(): ?int
     {
-        return $this->parfume;
+        return $this->perfume;
     }
 
     public function setPerfume(int $perfume): static
     {
-        $this->parfume = $perfume;
+        $this->perfume = $perfume;
 
         return $this;
     }
