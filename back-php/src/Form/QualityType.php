@@ -27,10 +27,10 @@ class QualityType extends AbstractType
         $builder
             ->add('product', EntityType::class, [
                 'class' => Product::class,
-                'choice_label' => 'name',
+                'choice_label' => 'productName',
                 'multiple' => true,
             ])
-            ->add('parfume', ChoiceType::class, [
+            ->add('perfume', ChoiceType::class, [
                 'choices' => $choices,
             ])
             ->add('texture', ChoiceType::class, [
@@ -39,10 +39,10 @@ class QualityType extends AbstractType
             ->add('application', ChoiceType::class, [
                 'choices' => $choices,
             ])
-            ->add('packaging_attractive', ChoiceType::class, [
+            ->add('packagingAttractive', ChoiceType::class, [
                 'choices' => $choices,
             ])
-            ->add('packaging_convenient', ChoiceType::class, [
+            ->add('packagingConvenient', ChoiceType::class, [
                 'choices' => $choices,
             ])
             ->add('efficiency', ChoiceType::class, [
