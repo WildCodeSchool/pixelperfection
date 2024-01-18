@@ -1,8 +1,10 @@
 {{ form_start(form) }}
-<span class="quality_h1">Product Quality</span>
+
+<div class="qualityback">
 
 <div class="qualityf">
 
+    <span class="quality_h1">Product Quality</span>
 
 <span class="title-category">Sensory</span>
 
@@ -23,4 +25,9 @@
 
     <button type="submit" class="btnqual">{{ button_label|default('Send') }}</button>
 </div>
+
+<img src="{{ asset('build/images/produits.JPG') }}" class="form-img" alt="produits">
+
+</div>
+
 {{ form_end(form) }}
