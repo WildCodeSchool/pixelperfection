@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20240117180755 extends AbstractMigration
+final class Version20240118150015 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,6 +20,7 @@ final class Version20240117180755 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
+        $this->addSql('CREATE TABLE contact (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, message LONGTEXT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE country (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, supermarket DOUBLE PRECISION NOT NULL, beauty_salon DOUBLE PRECISION NOT NULL, pharmacy DOUBLE PRECISION NOT NULL, perfumery DOUBLE PRECISION NOT NULL, online DOUBLE PRECISION NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE country_product (country_id INT NOT NULL, product_id INT NOT NULL, INDEX IDX_1A065CC0F92F3E70 (country_id), INDEX IDX_1A065CC04584665A (product_id), PRIMARY KEY(country_id, product_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
         $this->addSql('CREATE TABLE product (id INT AUTO_INCREMENT NOT NULL, brand VARCHAR(255) NOT NULL, product_name VARCHAR(255) NOT NULL, product_category VARCHAR(255) NOT NULL, product_base_price DOUBLE PRECISION NOT NULL, product_quantity INT NOT NULL, product_total_price DOUBLE PRECISION NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
@@ -33,6 +34,7 @@ final class Version20240117180755 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE country_product DROP FOREIGN KEY FK_1A065CC0F92F3E70');
         $this->addSql('ALTER TABLE country_product DROP FOREIGN KEY FK_1A065CC04584665A');
+        $this->addSql('DROP TABLE contact');
         $this->addSql('DROP TABLE country');
         $this->addSql('DROP TABLE country_product');
         $this->addSql('DROP TABLE product');
