@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product Quality{% endblock %}
+
+{% block body %}
+
+    <h1 class="quality_h1">Product Quality</h1>
+
+    {{ include('quality/_form.html.twig') }}
+
+    <a href="{{ path('app_quality_index') }}">back to list</a>
+
+{% endblock %}

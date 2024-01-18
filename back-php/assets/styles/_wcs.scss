@@ -8,8 +8,8 @@ $light: #fffbfb;
 
 body {
     margin:0;
-    background-color: $wild-color;
-    color: $light;
+    background-color: navajowhite;
+    color: black;
 }
 
 
@@ -37,4 +37,8 @@ body {
         max-width: 100%;
         height: auto;
     }
+}
+
+.quality {
+    align-items: center;
 }
