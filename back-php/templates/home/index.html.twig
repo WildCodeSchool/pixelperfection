@@ -3,13 +3,66 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
-    </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/logo-wild-code-school.svg') }}"
-             alt="">
-    </div>
+    <!-- Masthead-->
+    <header>
+        <div class="card text-bg-dark">
+            <img src="{{ asset('build/images/homepage2.png') }}" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Welcome To Pixel Perfection</h5>
+                <p class="card-text">Where AI serves beauty !</p>
+                <a class="btn btn-primary btn-xl text-uppercase" href="/about">More about us</a>
+            </div>
+        </div>
+    </header>
+    <!-- Objectives -->
+    <section class="page-section" id="objectives">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Our Approach</h2>
+                <h3 class="section-subheading text-muted">Here's how we're dedicated to enhancing your beauty
+                    experience.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-globe fa-stack-1x fa-inverse"></i>
+                </span>
+                    <h4 class="my-3">Global Product Showcase</h4>
+                    <p class="text-muted">Discover and explore our flagship L'Oréal products showcased on an interactive
+                        map, providing a seamless e-commerce experience tailored to your region.</p>
+                </div>
+                <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-magic fa-stack-1x fa-inverse"></i>
+                </span>
+                    <h4 class="my-3">Enhanced Beauty Visualization</h4>
+                    <p class="text-muted">Immerse yourself in the world of beauty with our responsive design that allows
+                        for virtual try-ons and personalized product visualizations using augmented reality
+                        technology.</p>
+                </div>
+                <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                </span>
+                    <h4 class="my-3">Secure Beauty Journey</h4>
+                    <p class="text-muted">Experience peace of mind as we prioritize the security of your beauty journey,
+                        ensuring the protection of your personal data and online transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map -->
+    <section class="page-section" id="map">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">An interactive map</h2>
+                <h3 class="section-subheading text-muted">Here's how we're dedicated to enhancing your beauty
+                    experience.</h3>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
