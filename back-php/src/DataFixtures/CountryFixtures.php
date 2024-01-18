@@ -366,6 +366,7 @@ class CountryFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
+
         foreach (self::PAYS as $value) {
             $country = new Country();
             $country->setName($value['name']);
@@ -375,15 +376,8 @@ class CountryFixtures extends Fixture
             $country->setPerfumery($value['perfumery']);
             $country->setOnline($value['online']);
             $manager->persist($country);
-            $this->addReference($value['name'], $country);
+            $this->addReference('country_' . $value['name'], $country);
         }
         $manager->flush();
-    }
-
-    public function getDependencies(): array
-    {
-        return [
-            ProductFixtures::class,
-        ];
     }
 }

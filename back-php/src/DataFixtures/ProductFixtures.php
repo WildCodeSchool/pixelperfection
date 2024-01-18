@@ -3,10 +3,12 @@
 namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Product;
+use Faker\Factory;
 
-class ProductFixtures extends Fixture
+class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
     private const PRODUCT = [
         [
@@ -873,10 +875,12 @@ class ProductFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
+        $faker = Factory::create('fr_FR');
         foreach (self::PRODUCT as $value) {
             $product = new Product();
             $product->setProductName($value['productName']);
-            $product->addCountry($this->getReference($value['countries']));
+            $product->addCountry($this->getReference('country_'. $value['countries']));
+            $product->addQuality($this->getReference('quality_' . $faker->numberBetween(0, 49)));
             $manager->persist($product);
         }
         $manager->flush();
@@ -886,6 +890,7 @@ class ProductFixtures extends Fixture
     {
         return [
             CountryFixtures::class,
+            QualityFixtures::class
         ];
     }
 }
