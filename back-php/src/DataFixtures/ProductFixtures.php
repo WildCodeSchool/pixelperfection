@@ -6,8 +6,6 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Product;
 
-
-
 class ProductFixtures extends Fixture
 {
     private const PRODUCT = [
