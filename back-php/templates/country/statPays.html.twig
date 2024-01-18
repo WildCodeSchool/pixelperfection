@@ -3,6 +3,12 @@
 {% block title %}Hello CountryController!{% endblock %}
 
 {% block body %}
-    <h1> {{ country.name }}</h1>
-    {{ dump(country) }}
+    <h1> Market share in {{ country.name }}</h1>
+
+    <h2> Supermarket : {{ country.supermarket }} %</h2>
+    <h2> Beauty Salon : {{ country.beautySalon }} %</h2>
+    <h2> Pharmacy : {{ country.Pharmacy }} %</h2>
+    <h2> Perfumery : {{ country.Perfumery }} %</h2>
+    <h2> Online : {{ country.online }} %</h2>
+
 {% endblock %}
