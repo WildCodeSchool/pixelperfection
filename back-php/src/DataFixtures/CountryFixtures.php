@@ -363,6 +363,7 @@ class CountryFixtures extends Fixture
         ],
 
     ];
+
     public function load(ObjectManager $manager): void
     {
         foreach (self::PAYS as $value) {

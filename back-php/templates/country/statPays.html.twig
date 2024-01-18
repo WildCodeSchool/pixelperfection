@@ -2,13 +2,45 @@
 
 {% block title %}Hello CountryController!{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+{% endblock %}
+
 {% block body %}
     <h1> Market share in {{ country.name }}</h1>
 
-    <h2> Supermarket : {{ country.supermarket }} %</h2>
-    <h2> Beauty Salon : {{ country.beautySalon }} %</h2>
-    <h2> Pharmacy : {{ country.Pharmacy }} %</h2>
-    <h2> Perfumery : {{ country.Perfumery }} %</h2>
-    <h2> Online : {{ country.online }} %</h2>
+    <canvas id="myChart" width="30" height="10"></canvas>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('myChart').getContext('2d');
+
+            var data = {
+                labels: ['Supermarket', 'Beauty Salon', 'Pharmacy', 'Perfumery', 'Online'],
+                datasets: [{
+                    data: [
+                        {{ country.supermarket }},
+                        {{ country.beautySalon }},
+                        {{ country.Pharmacy }},
+                        {{ country.Perfumery }},
+                        {{ country.online }},
+                    ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                    ],
+                }],
+            };
+
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+            });
+        });
+    </script>
 {% endblock %}
