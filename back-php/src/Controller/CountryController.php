@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Country;
-use App\Repository\CountryRepository;
-use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
