@@ -5,15 +5,21 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+    <!-- Ajout du lien vers la feuille de style Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 {% endblock %}
 
 {% block body %}
-    <h1> </h1>
+<div class="container mt-3">
+    <h1><a href="{{ path('app_quality_new') }}" class="btn btn-primary">We'll be glad to hear your feedback</a></h1>
 
-    <h2>Most selled Products:</h2>
-    <ul>
+    <h2 class="mt-4">Most sold Products in {{ country.name }}</h2>
+
+    <ul class="list-group">
         {% for product in country.products %}
-            <li><a href="{{ path('app_quality_new') }}">{{ product.productName }}</a></li>
+            <li class="list-group-item">
+                <a href="{{ path('app_quality_new') }}" class="btn btn-link">{{ product.productName }}</a>
+            </li>
         {% endfor %}
     </ul>
 
