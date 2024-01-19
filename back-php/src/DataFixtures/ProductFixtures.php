@@ -879,7 +879,9 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
         foreach (self::PRODUCT as $value) {
             $product = new Product();
             $product->setProductName($value['productName']);
+
             $product->addCountry($this->getReference('country_' . $value['countries']));
+
             $product->addQuality($this->getReference('quality_' . $faker->numberBetween(0, 49)));
             $manager->persist($product);
         }
