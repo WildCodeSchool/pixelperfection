@@ -1,0 +1,75 @@
+.form-img{
+    position: absolute;
+    bottom: 5px;
+    right: 45px;
+    z-index: -1;
+    width: 69%;
+}
+.qualityback{
+    background-image: linear-gradient(to right, rgba(255, 215, 0, 0.55), rgba(224, 148, 4, 0.47));
+}
+.product{
+    margin-bottom: -46px;
+    height: 65px;
+    margin-left: 5px;
+    border-radius: 11px;
+    width: 171px;
+}
+.qualityf {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 44px;
+    font-weight:bold;
+    margin-left: 133px;
+}
+
+.quality_h1{
+    display: flex;
+    color: #090606;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 38%;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.title-category {
+    display: block;
+    font-weight: bolder;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    margin-left: -11px;
+}
+
+
+.quality {
+    margin-bottom: 20px;
+    height: 26px;
+    margin-left: 5px;
+    border-radius: 11px;
+    width: 45px;
+
+}
+
+.btnqual {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(157, 107, 11, 0.89);
+    text-align: center;
+    font-size: 20px;
+    flex: 0;
+    color: #f5f0f0;
+    cursor: pointer;
+    padding: 0px 5px;
+    margin: 10px;
+    border: solid #e89f3f 1px;
+    font-weight: bolder;
+}
+
+.btnqual:hover {
+    background-color: #d59d55;
+}

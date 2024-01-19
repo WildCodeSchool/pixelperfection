@@ -250,14 +250,6 @@ class CountryFixtures extends Fixture
             'online' => 20.47,
         ],
         [
-            'name' => 'Portugal',
-            'supermarket' => 17.60,
-            'beautySalon' => 23.42,
-            'pharmacy' => 22.35,
-            'perfumery' => 16.17,
-            'online' => 20.46,
-        ],
-        [
             'name' => 'Romania',
             'supermarket' => 19.31,
             'beautySalon' => 25.08,
@@ -361,10 +353,20 @@ class CountryFixtures extends Fixture
             'perfumery' => 21.63,
             'online' => 23.29,
         ],
+        [
+            'name' => 'Italy',
+            'supermarket' => 22.45,
+            'beautySalon' => 6.28,
+            'pharmacy' => 13.17,
+            'perfumery' => 30.61,
+            'online' => 27.49,
+        ],
 
     ];
+
     public function load(ObjectManager $manager): void
     {
+
         foreach (self::PAYS as $value) {
             $country = new Country();
             $country->setName($value['name']);
@@ -374,6 +376,7 @@ class CountryFixtures extends Fixture
             $country->setPerfumery($value['perfumery']);
             $country->setOnline($value['online']);
             $manager->persist($country);
+            $this->addReference('country_' . $value['name'], $country);
         }
         $manager->flush();
     }

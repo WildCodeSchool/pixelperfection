@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quality index{% endblock %}
+
+{% block body %}
+    <h1>Quality index</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Perfume</th>
+                <th>Texture</th>
+                <th>Application</th>
+                <th>Packaging_attractive</th>
+                <th>Packaging_convenient</th>
+                <th>Efficiency</th>
+                <th>Allergy</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quality in qualities %}
+            <div class='quality'>
+            <tr>
+                <td>{{ quality.id }}</td>
+                <td>{{ quality.perfume }}</td>
+                <td>{{ quality.texture }}</td>
+                <td>{{ quality.application }}</td>
+                <td>{{ quality.packagingAttractive }}</td>
+                <td>{{ quality.packagingConvenient }}</td>
+                <td>{{ quality.efficiency }}</td>
+                <td>{{ quality.allergy ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_quality_show', {'id': quality.id}) }}">show</a>
+                    <a href="{{ path('app_quality_edit', {'id': quality.id}) }}">edit</a>
+                </td>
+            </tr>
+            </div>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_quality_new') }}">Create new</a>
+{% endblock %}

@@ -2,7 +2,52 @@
 
 {% block title %}Hello CountryController!{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+{% endblock %}
+
 {% block body %}
-    <h1> {{ country.name }}</h1>
-    {{ dump(country) }}
+    <h1> </h1>
+
+    <h2>Most selled Products:</h2>
+    <ul>
+        {% for product in country.products %}
+            <li><a href="{{ path('app_quality_new') }}">{{ product.productName }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <canvas id="myChart" width="30" height="10"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('myChart').getContext('2d');
+
+            var data = {
+                labels: ['Supermarket', 'Beauty Salon', 'Pharmacy', 'Perfumery', 'Online'],
+                datasets: [{
+                    data: [
+                        {{ country.supermarket }},
+                        {{ country.beautySalon }},
+                        {{ country.Pharmacy }},
+                        {{ country.Perfumery }},
+                        {{ country.online }},
+                    ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                    ],
+                }],
+            };
+
+            var myDoughnutChart = new Chart(ctx, {
+                type: 'bar',
+                data: data,
+            });
+        });
+    </script>
 {% endblock %}
