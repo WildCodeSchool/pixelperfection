@@ -1,0 +1,34 @@
+{{ form_start(form) }}
+
+<div class="qualityback">
+
+<div class="qualityf">
+
+    <span class="quality_h1">Product Quality</span>
+
+        {{ form_row(form.product, {'attr': {'class': 'product'}}) }}
+
+    <span class="title-category">Sensory</span>
+
+        {{ form_row(form.perfume, {'attr': {'class': 'quality'}}) }}
+        {{ form_row(form.texture, {'attr': {'class': 'quality'}}) }}
+        {{ form_row(form.application, {'attr': {'class': 'quality'}}) }}
+
+<span class="title-category">Packaging</span>
+
+        {{ form_row(form.packagingAttractive, {'attr': {'class': 'quality'}}) }}
+        {{ form_row(form.packagingConvenient, {'attr': {'class': 'quality'}}) }}
+
+<span class="title-category">Results</span>
+
+        {{ form_row(form.efficiency, {'attr': {'class': 'quality'}}) }}
+        {{ form_row(form.allergy, {'attr': {'class': 'quality'}}) }}
+
+    <button type="submit" class="btnqual">{{ button_label|default('Send') }}</button>
+</div>
+
+<img src="{{ asset('build/images/produits.JPG') }}" class="form-img" alt="produits">
+
+</div>
+
+{{ form_end(form) }}

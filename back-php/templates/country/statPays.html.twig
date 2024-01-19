@@ -8,7 +8,14 @@
 {% endblock %}
 
 {% block body %}
-    <h1> Market share in {{ country.name }}</h1>
+    <h1> </h1>
+
+    <h2>Most selled Products:</h2>
+    <ul>
+        {% for product in country.products %}
+            <li><a href="{{ path('app_quality_new') }}">{{ product.productName }}</a></li>
+        {% endfor %}
+    </ul>
 
     <canvas id="myChart" width="30" height="10"></canvas>
 
