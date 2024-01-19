@@ -19,7 +19,6 @@ class CountryController extends AbstractController
     #[Route('/{name}', name: 'app_country_name')]
     public function statPays(Country $country): Response
     {
-
         return $this->render('country/statPays.html.twig', [
             'country' => $country,
         ]);
